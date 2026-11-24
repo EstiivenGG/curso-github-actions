@@ -1,0 +1,11 @@
+name: Hola-mundo
+on: push
+jobs:
+  saludar:
+  runs on: ubuntu-latest
+  steps:
+    - name: descarar el repositorio
+      uses: action/checkout@4
+
+    - name: ejecutar hola_mundo.py
+      uses: python hola_mundo.py
