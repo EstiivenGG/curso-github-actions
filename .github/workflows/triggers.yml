@@ -1,15 +1,15 @@
 name: hola triggers
-on: 
+on:
   schedule:
-    - cron: '0 0 * * *' # every day at midnight
+    - cron: "0 0 * * *" # every day at midnight
   push: # mi orden de triggers.yml (sapos)
   pull_request: # aca para encontrar si todo esta bien para entrar a la rama princiapl sin generarnos daños a la estructura logica
 jobs:
   check:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: checkout
-          uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: run pull request
-          run: echo ${{ github.event_name }}S
+        run: echo ${{ github.event_name }}S
