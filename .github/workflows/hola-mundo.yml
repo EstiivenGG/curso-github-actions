@@ -4,7 +4,7 @@ jobs:
   saludar:
   runs on: ubuntu-latest
   steps:
-    - name: descarar el repositorio
+    - name: descargar el repositorio
       uses: action/checkout@4
 
     - name: ejecutar hola_mundo.py
